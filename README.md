@@ -34,7 +34,7 @@ Each reads **JSON from stdin** and writes **JSON to stdout**, producing determin
 
 ## File-by-File Description
 
-### 🏭 `factory/main.py`
+### `factory/main.py`
 **Purpose:**  
 Computes a feasible steady-state production plan that exactly produces a target item at a given rate.
 
@@ -71,7 +71,7 @@ eff_r = machines[m].crafts_per_min * (1 + speed) * 60 / time_s
   "per_machine_counts": {...},
   "raw_consumption_per_min": {...}
 }
-
+```
 ## belts/main.py
 
 Purpose:
