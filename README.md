@@ -189,13 +189,14 @@ python run_samples.py
 Part 1 (“Factorio Prep & Submission Guide”) introduced the concepts of rates, throughput, and bottlenecks using the actual game.
 Part 2 converts those same mechanics into mathematical models:
 
-Concept in Factorio Prep	   |  Representation in Code
-Items/min graphs	           |  JSON input fields
-Machine productivity	       |  LP coefficient (1 + prod)
-Module speed effects	       |  Multiplier in eff_crafts_per_min
-Splitters & belts	           |  Edges in a flow network
-Bottlenecks	                   |  Binding constraints in LP / saturated edges in flow
-“Steady state”	               |  Item balance equations
+| Concept in Factorio Prep	   |  Representation in Code |
+|-------------------------|-------------------------------|
+| Items/min graphs	           |  JSON input fields |
+| Machine productivity	       |  LP coefficient (1 + prod) |
+| Module speed effects	       |  Multiplier in eff_crafts_per_min |
+| Splitters & belts	           |  Edges in a flow network |
+| Bottlenecks	                   |  Binding constraints in LP / saturated edges in flow |
+| “Steady state”	               |  Item balance equations |
 
 Thus, Part 2 is a formalized, solver-based abstraction of the manual balancing you performed in Part 1.
 
@@ -203,9 +204,10 @@ Thus, Part 2 is a formalized, solver-based abstraction of the manual balancing y
 
 During validation, the sample input and output in the assignment PDF were found to be inconsistent:
 
-Field	                               |PDF Input	|PDF Output	                     |  Issue
-raw_supply_per_min.copper_ore	       |  5000	  | 5400 consumed	                 |   Output violates cap
-chemical machine speed	          |   crafts_per_min = 60, time_s = 3.2	|Output implies ≈ 50 machines, not derivable from input constants|	Mathematical mismatch
+| Field	                               |PDF Input	|PDF Output	                     |  Issue |
+|-------------------------------------|------------|------------------------------|----------|
+| raw_supply_per_min.copper_ore	       |  5000	  | 5400 consumed	                 |   Output violates cap |
+| chemical machine speed	          |   crafts_per_min = 60, time_s = 3.2	|Output implies ≈ 50 machines, not derivable from input constants|	Mathematical mismatch |
 ##  Resolution
 
 To maintain both correctness and test compatibility:
