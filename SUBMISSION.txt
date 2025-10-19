@@ -1,0 +1,9 @@
+Name: Agrim Chandra
+Email: mt1221952@iitd.ac.in
+OS: Windows 11
+CPU: Intel Core i7
+RAM: 16 GB
+Language: Python 3.13.3
+Notes:
+- Uses PuLP (CBC solver) and NetworkX for deterministic output.
+- All tests pass locally under pytest and verify_* scripts.
